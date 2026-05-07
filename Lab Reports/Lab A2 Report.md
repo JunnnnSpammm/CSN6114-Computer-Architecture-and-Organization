@@ -1,4 +1,4 @@
-# Lab 2 - Report
+# Lab A2 - Report
 
 ## 1. Perform the study of the truth table of the following logic gates and verify the truth table of the gates experimentally.
 

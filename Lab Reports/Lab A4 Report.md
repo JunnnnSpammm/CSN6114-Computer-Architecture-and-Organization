@@ -1,4 +1,4 @@
-# Lab 4 - Report
+# Lab A4 - Report
 
 ## 1. Design a combinational logic circuit for 3-input minority circuit. Assume that a minority circuit is one which produces a HIGH (1) when two or more inputs are LOW (0).
 

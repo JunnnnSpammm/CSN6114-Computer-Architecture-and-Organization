@@ -1,4 +1,4 @@
-# Lab 5 - Report
+# Lab A5 - Report
 
 ## 1. Design a 3 input priority encoder circuit. The inputs are a3a2a1, with a3 having the lowest priority and a1 the highest. The outputs are y2y1, indicating the encoded highest-priority active input, and v, the valid output which indicates that at least one input is active. (Note: Priority input a3 is encoded as 11, a2 as 10 and a1 as 01). Perform the following:
 

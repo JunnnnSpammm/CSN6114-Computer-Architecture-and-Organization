@@ -60,13 +60,17 @@
 
 Q0 changes every clock pulse. Q1 changes every time Q0 goes from high to low. Q2 changes every time Q1 goes from high to low. Q3 changes every time Q2 goes from high to low. When the counter count till 1100 (12), it will reset all D flip flop to 0000, repeating the counter again.
 
+<img width="624" height="362" alt="1 drawio" src="https://github.com/user-attachments/assets/29491955-868e-43ec-b185-c10a8d74400c" />
+
 ### v. Ripple divide by 14 Counter
 
 <img width="450" height="230" alt="Screenshot 2026-05-09 at 4 22 25 PM" src="https://github.com/user-attachments/assets/153b3ee6-d0cd-46e8-b69a-09d62cf8db8e" />
 
 Q0 changes every clock pulse. Q1 changes every time Q0 goes from high to low. Q2 changes every time Q1 goes from high to low. Q3 changes every time Q2 goes from high to low. When the counter count till 1110 (14), it will reset all D flip flop to 0000, repeating the counter again.
 
-## 4.  Design and Construct a parallel counter that has the following sequence. If the input (UP)/(DOWN)’ = 1, it will count up, 000-010-100-110 and then recycle to 000 If the input (UP)/ (DOWN)’ = 0, it will count down, 110-100-010-000 and then recycle to 110. Undesired states are don’t care states.
+<img width="706" height="362" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/469efd36-eebf-46fe-8b56-4a1c72f51e1e" />
+
+## 4.  Design and Construct<?xml version="1.0" encoding="UTF-8"?>
 
 <img width="562" height="130" alt="Screenshot 2026-05-09 at 4 22 52 PM" src="https://github.com/user-attachments/assets/29696d68-5019-4391-9dc0-599c68a91f90" />
 

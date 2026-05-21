@@ -101,3 +101,7 @@ MSB->LSB: T, T, D, JK
 <img width="552" height="305" alt="Screenshot 2026-05-20 at 2 09 15 PM" src="https://github.com/user-attachments/assets/4e5ca7c2-f9d7-48b7-8d00-48c535f9b232" />
 
 **$K_D$ =** I + AB'C'
+
+### Final Circuit
+
+<img width="403" height="591" alt="Screenshot 2026-05-21 at 9 10 04 PM" src="https://github.com/user-attachments/assets/8dfe9240-c0ef-4a6d-a7aa-f7d129853287" />

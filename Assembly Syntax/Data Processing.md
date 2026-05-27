@@ -99,3 +99,78 @@ ADD R0, R1, R5, LSL #4  ; R0 = R1 + (R5 << 4)
                         ; left by 4 bit positions (multiplying R5 by 16).
                         ; Then, it adds that shifted result to R1 and saves it into R0.
 ```
+
+## Add With Carry `ADC`
+Use after `ADDS` to perform a 64 bits addition
+
+```assembly
+ADC r1, r2, r3      ; r1 = r2 + r3 + Carry Flag
+                    ; ADC will not reset the carry flag value
+
+ADCS r1, r2, r3     ; r1 = r2 + r3 + Carry Flag
+                    ; ADCS will update the carry flag value
+```
+
+## Multiply `MUL`
+
+```assembly
+MUL r0, r1, r2      ; r0 = r1 * r2
+                    ; The low-order 32 bits of the 64-bit product are written into R0
+                    ; For 2’s-complement numbers, the value in R0 is correct if the product fits into 32 bits
+
+MLA r0, r4, r5, r6  ; r0 = (r4 * r5) + r6
+```
+
+## Bitwise logical operations
+Compares bits in both register and return a value based on the operands
+
+```assembly
+AND r0, r1, r2      ; If both bits are 1, the resulting bit is 1. Otherwise, the resulting bit is 0.
+                    ; If r1 = 0b0011 and r2 = 0b0101
+                    ; r0 = 0b0001
+
+ORR r0, r1, r2      ; If either bits are 1, the resulting bit is 1. Otherwise, the resulting bit is 0.
+                    ; If r1 = 0b0011 and r2 = 0b0101
+                    ; r0 = 0b0111
+
+EOR r0, r1, r2      ; If only one bits are 1, the resulting bit is 1. Otherwise, the resulting bit is 0.
+                    ; If r1 = 0b0011 and r2 = 0b0101
+                    ; r0 = 0b0110
+
+BIC r0, r1, r2      ; Return 0 if the bit in r2 is 1. Otherwise, follow the bit in r1
+                    ; If r1 = 0b0011 and r2 = 0b0101
+                    ; r0 = 0b0010
+```
+
+## Test
+`TST` performs bit-wise logical `AND` of the two operands, then sets condition code flags. Useful for checking status bits in I/O devices
+
+```assembly
+TST r3, #1          ; Test the lowest bit of r3
+                    ; Set zero flag (Z) to 1 if the lowest bit of r3 is 0
+                    ; Set zero flag (Z) to 0 if the lowest bit of r3 is 1
+
+TST r1, r2          ; Test all bits in r1 and r2
+                    ; Set zero flag (Z) to 1 if all of the bits doesn't match in both r1 and r2
+                    ; Otherwise, set zero flag (Z) to 0
+```
+
+`TEQ` performs bit-wise logical `XOR` of the two operands, then sets condition code flags. Useful for checking status bits in I/O devices
+
+```assembly
+TEQ r1, r2          ; Test all bits in r1 and r2
+                    ; Set zero flag (Z) to 1 if all of the bits match in both r1 and r2. Otherwise, set zero flag (Z) to 0
+                    ; Set sign flag (N) to 1 if r1 and r2 have different sign
+```
+
+## Compare `CMP`
+Performs `[Rn] - [Rm]` and updates condition code flags based on the result
+
+```assembly
+CMP r0, r1          ; Performs r0 - r1
+                    ; Set sign flag (N) to 1 if r0 < r1
+                    ; Set zero flag (Z) to 1 if r0 - r1 = 0
+                    ; Set carry flag (C) to 1 if r0 < unsigned r1
+                    ; Set overflow flag (V) to 1 if the operation caused a signed overlfow
+                    ; If flag condition not met, set to 0
+```

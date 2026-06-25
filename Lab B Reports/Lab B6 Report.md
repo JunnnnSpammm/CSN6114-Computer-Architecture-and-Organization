@@ -125,12 +125,12 @@ $$S = \frac{20\tau}{8\tau} = 2.5$$
 
 ### 4. Suppose an 8-bit data word stored in memory is 1111 1000. Using the Hamming algorithm, determine what is the value of the four check bits (Check bit 8, Check bit 4, Check bit 2 and Check bit 1) that would be stored in memory with the data word. Show how you got your answer.
 
-|   Bit position  |  12  |  11  |  10  |   9  |   8  |   7  |   6  |   5  |   4  |   3  |   2  |   1   |
-|:---------------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:-----:|
-| Position number | 1100 | 1011 | 1010 | 1001 | 1000 | 0111 | 0110 | 0101 | 0100 | 0011 | 0010 | 00101 |
-|     Data bit    |  D8  |  D7  |  D6  |  D5  |      |  D4  |  D3  |  D2  |      |  D1  |      |       |
-|    Check bit    |      |      |      |      |  C8  |      |      |      |  C4  |      |  C2  |   C1  |
-|       Word      |   1  |   1  |   1  |   1  |   0  |   1  |   0  |   0  |   0  |   0  |   1  |   1   |
+|   Bit position  |  12  |  11  |  10  |   9  |   8  |   7  |   6  |   5  |   4  |   3  |   2  |   1  |
+|:---------------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| Position number | 1100 | 1011 | 1010 | 1001 | 1000 | 0111 | 0110 | 0101 | 0100 | 0011 | 0010 | 0001 |
+|     Data bit    |  D8  |  D7  |  D6  |  D5  |      |  D4  |  D3  |  D2  |      |  D1  |      |      |
+|    Check bit    |      |      |      |      |  C8  |      |      |      |  C4  |      |  C2  |  C1  |
+|       Word      |   1  |   1  |   1  |   1  |   0  |   1  |   0  |   0  |   0  |   0  |   1  |   1  |
 
 $$C8 = D8 \oplus D7 \oplus D6 \oplus D5 = 0$$
 $$C4 = D8 \oplus D4 \oplus D3 \oplus D2 = 0$$
